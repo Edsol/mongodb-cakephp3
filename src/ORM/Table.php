@@ -368,6 +368,9 @@ class Table extends CakeTable
     public function count(array $filters = [], array $options = [])
     {
         $collection = $this->__getCollection();
+
+        MongoFinder::translateNestedArray($filters);
+        MongoFinder::translateConditions($filters);
         return $collection->countDocuments($filters, $options);
     }
 }
