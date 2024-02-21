@@ -355,4 +355,17 @@ class Table extends CakeTable
 
         return new \MongoDB\BSON\ObjectId();
     }
+
+    /**
+     * count documents in collection 
+     *
+     * @param  array $filters
+     * @param  array $options
+     * @return int|null
+     */
+    public function count(array $filters = [], array $options = [])
+    {
+        $collection = $this->__getCollection();
+        return $collection->countDocuments($filters, $options);
+    }
 }
