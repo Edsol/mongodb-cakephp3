@@ -66,11 +66,13 @@ class Table extends CakeTable
             }
             $results = new ResultSet($mongoCursor, $alias);
 
+            $documents = $results->toArray();
+            $query->setTotalRows(count($documents));
+
             if (isset($options['whitelist'])) {
-                return new MongoQuery($results->toArray(), $query->count());
-            } else {
-                return $results->toArray();
+                return new MongoQuery($documents, $query->count());
             }
+            return $documents;
         }
 
         throw new BadMethodCallException(

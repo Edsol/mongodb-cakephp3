@@ -326,4 +326,15 @@ class MongoFinder
     {
         return $this->_totalRows;
     }
+
+    /**
+    * setTotalRows
+    *
+    * @param  int $rows
+    * @return void
+    */
+   public function setTotalRows(int $rows)
+   {
+       $this->_totalRows = $rows;
+   }
 }
