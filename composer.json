@@ -1,5 +1,5 @@
 {
-    "name": "edsol/mongodb",
+    "name": "edsol/mongodb-cakephp",
     "description": "An Mongodb datasource for CakePHP 3.0",
     "type": "cakephp-plugin",
     "require": {
