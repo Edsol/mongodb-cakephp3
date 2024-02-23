@@ -1,10 +1,13 @@
 [![Slack](https://img.shields.io/badge/join%20the%20conversation-on%20slack-green.svg)](https://mongodb-cakephp3.slack.com/messages/general/)
 
-# Fork
+# what's more
+The fork fixes some bugs and adds the ability to be able to count rows in a collection:
 
+```php
+$this->Categories->count($filters, $options);
+```
 
 ---
-
 
 Mongodb for Cakephp3
 ========
