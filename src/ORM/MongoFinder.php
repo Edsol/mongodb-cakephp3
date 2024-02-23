@@ -1,6 +1,6 @@
 <?php
 
-namespace Giginc\Mongodb\ORM;
+namespace Edsol\Mongodb\ORM;
 
 use Cake\Utility\Hash;
 use MongoDB\Collection;

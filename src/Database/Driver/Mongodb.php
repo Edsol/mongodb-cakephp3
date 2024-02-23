@@ -1,6 +1,6 @@
 <?php
 
-namespace Giginc\Mongodb\Database\Driver;
+namespace Edsol\Mongodb\Database\Driver;
 
 use Exception;
 use MongoDB\Driver\ReadPreference;

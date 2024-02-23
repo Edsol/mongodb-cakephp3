@@ -28,8 +28,8 @@ Now, you need to set the connection in your config/app.php file:
 ```php
  'Datasources' => [
     'default' => [
-        'className' => 'Giginc\Mongodb\Database\Connection',
-        'driver' => 'Giginc\Mongodb\Database\Driver\Mongodb',
+        'className' => 'Edsol\Mongodb\Database\Connection',
+        'driver' => 'Edsol\Mongodb\Database\Driver\Mongodb',
         'persistent' => false,
         'host' => 'localhost',
         'port' => 27017,
@@ -51,12 +51,12 @@ Now, you need to set the connection in your config/app.php file:
 If you want to connect to MongoDB using a SSH tunnel, you need to set additional variables in your Datasource. Some variables are unnecessary, depending on how you intend to connect. IF you're connecting using a SSH key file, the ```ssh_pubkey_path``` and ```ssh_privatekey_path``` variables are necessary and the ```ssh_password``` variable is unnecessary. If you're connecting using a text-based password (which is **not** a wise idea), the reverse is true. The function needs, at minimum, ```ssh_host```, ```ssh_user``` and one method of authentication to establish a SSH tunnel.
 
 ## Models
-After that, you need to load Giginc\Mongodb\ORM\Table in your tables class:
+After that, you need to load Edsol\Mongodb\ORM\Table in your tables class:
 
 ```php
 //src/Model/Table/YourTable.php
 
-use Giginc\Mongodb\ORM\Table;
+use Edsol\Mongodb\ORM\Table;
 
 class CategoriesTable extends Table {
 
