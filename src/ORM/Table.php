@@ -373,4 +373,14 @@ class Table extends CakeTable
         MongoFinder::translateConditions($filters);
         return $collection->countDocuments($filters, $options);
     }
+
+    /**
+     * @param  array $options
+     * @return int|null
+     */
+    public function estimatedCount(array $options = []){
+        $collection = $this->__getCollection();
+
+        return $collection->estimatedDocumentCount($options);
+    }
 }
