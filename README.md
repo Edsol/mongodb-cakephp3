@@ -42,6 +42,7 @@ Now, you need to set the connection in your config/app.php file:
         'persistent' => false,
         'host' => 'localhost',
         'port' => 27017,
+        'srv' => false,
         'username' => '',
         'password' => '',
         'database' => 'devmongo',
